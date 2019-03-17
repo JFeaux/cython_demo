@@ -22,10 +22,12 @@ if __name__ == '__main__':
 
     n = 39916801
 
+    # Pure Python version of is_prime function
     with Timer() as t:
         result = is_prime(n)
     print('{} (s) {}'.format(t.interval, result))
 
+    # Cython version of is_prime function
     with Timer() as t:
         result = primes.is_prime(n)
     print('{} (s) {}'.format(t.interval, result))

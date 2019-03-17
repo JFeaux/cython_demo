@@ -14,6 +14,8 @@ class Timer(object):
 if __name__ == '__main__':
     n = 39916801
 
+    # We can call pre-existing c++ code from Python 
+    # by wrapping it in Cython 
     with Timer() as t:
         result = primes.is_prime(n)
     print('{} (s) {}'.format(t.interval, result))
